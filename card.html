@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+</head>
+<style>
+
+    
+body {
+  cursor: url(./Img/Thor\ Wepan.png), auto;
+}
+
+.landingPage {
+  background-image: url(./Img/Background.png);
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: azure;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: rgb(16, 14, 13);
+}
+
+/* header */
+header {
+  position: relative;
+  padding: 0.2 rem 2rem;
+  background-image: linear-gradient(rgb(14, 19, 16), #002733);
+  /* opacity: 0.5; */
+}
+
+/* .nav {
+    background-image: linear-gradient(to right, rgb(0, 188, 160) , rgb(14, 14, 8));
+    
+  } */
+
+.navbar {
+  width: 100%;
+  height: 60%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 2rem;
+  font-weight: bolder;
+  cursor: url(hammer.png), auto;
+  /* opacity: 1; */
+}
+
+.navbar .links {
+  display: flex;
+  background-color: none;
+  gap: 2rem;
+  border-radius: 1rem;
+  /* opacity: 10; */
+}
+
+.navbar .toggle_btn {
+  color: aliceblue;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.fullScreenTabs {
+  background-color: inherit;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.5 ease;
+}
+
+.fullScreenTabs a {
+  color: rgb(206, 217, 216);
+}
+.fullScreenTabs:hover {
+  scale: 1.15;
+  background-color: rgb(199, 181, 181);
+
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+.fullScreenTabs:active {
+  scale: 0.95;
+  background-color: rgb(170, 155, 155);
+}
+
+.action_btn {
+  background-color: orange;
+  color: aliceblue;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: aliceblue;
+}
+
+.action_btn:active {
+  scale: 0.95;
+  color: aliceblue;
+}
+
+/* DropDownMenu */
+.dropdown_menu {
+  position: absolute;
+  right: 1.5rem;
+  top: 3.5rem;
+  width: 250px;
+  background: rgb(49, 44, 44);
+  backdrop-filter: blur(50px);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s cubic-bezier(0.275, 0.285, 0.12, 1.5);
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu li:hover {
+  scale: 1.15;
+  background-color: rgb(199, 181, 181);
+
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+.dropdown_menu li:active {
+  scale: 0.95;
+  background-color: rgb(170, 155, 155);
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown_menu.open {
+  height: 12rem;
+}
+
+/* Responsive Navbar */
+
+@media (max-width: 1000px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .dropdown_menu {
+    right: 0;
+    top: 4rem;
+    width: 100vw;
+  }
+}
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    body {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    body {
+        /* background-image: url(./Img/Background.png); */
+        height: 100vh;
+        background-color: #002733;
+        /* background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; */
+    }
+
+    a{
+        text-decoration: none;
+        color: azure;
+        font-size: 1rem;
+    }
+
+    h1{
+        color: #fff;
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .main_card {
+        color: #fff;
+        width: 760px;
+        height: 390px;
+        margin: 50px auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 770px;
+        background: #00C9FF;
+        background: -webkit-linear-gradient(to right, #363636, #c3c1c1);
+        background: -webkit-gradient(linear, left top, right top, from(#363636), to(#00C9FF));
+        background: -webkit-linear-gradient(left, #363636, #c3c1c1);
+        background: -o-linear-gradient(left, #363636, #c3c1c1);
+        background: linear-gradient(to right, #363636, #c3c1c1);
+        -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        border-radius: 15px 15px;
+    }
+
+    .card_left {
+        width: 90%;
+    }
+
+    .card_datails {
+        width: 90%;
+        padding: 30px;
+        margin-top: -25px;
+    }
+
+    .card_datails h1 {
+        font-size: 30px;
+    }
+
+    .card_right img {
+        height: 390px;
+        border-radius: 2px;
+    }
+
+    .card_right {
+        border-radius: 2px;
+    }
+
+    .card_cat {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .PG,
+    .year,
+    .genre,
+    .time {
+        color: fff;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+
+    .PG {
+        background: #0a7b64;
+        -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        -webkit-transition: 300ms ease-in-out;
+    }
+
+    .disc {
+        font-weight: 100;
+        line-height: 27px;
+    }
+
+    a {
+        color: darkcyan;
+        display: block;
+        text-decoration: none;
+    }
+
+    .social-btn {
+        margin-left: -10px;
+    }
+
+    button {
+        color: #fff;
+        border: none;
+        padding: 20px;
+        outline: none;
+        font-size: 12px;
+        margin-top: 30px;
+        margin-left: 10px;
+        background: #016353;
+        border-radius: 12px;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        -webkit-transition: 300ms ease-in-out;
+        -o-transition: 200ms ease-in-out;
+        transition: 200ms ease-in-out;
+    }
+
+
+    button:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .play_btn {
+        height: 100%;
+        margin: -394px auto;
+        position: relative;
+        text-align: center;
+        background: rgba(0, 244, 170, 0.4);
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .fa-play-circle {
+        color: #255;
+        font-size: 160px;
+        margin-top: 110px;
+        -webkit-animation: bounce 1.0s -0.4s infinite;
+        animation: bounce 1.0s -0.4s infinite;
+    }
+
+    .fa-play-circle:hover {
+        color: aqua;
+        animation: bounce 0.4s infinite;
+    }
+
+    @-webkit-keyframes bounce {
+        8% {
+            transform: scale(0.3);
+            -webkit-transform: scale(0.8);
+            opacity: 1;
+        }
+
+        10% {
+            transform: scale(1.8);
+            -webkit-transform: scale2;
+            opacity: 0;
+        }
+    }
+
+    @keyframes bounce {
+        8% {
+            transform: scale(0.3);
+            -webkit-transform: scale(0.8);
+            opacity: 1;
+        }
+
+        20% {
+            transform: scale(1.8);
+            -webkit-transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes rotation {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+
+        to {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+</style>
+
+<body >
+
+    <div>
+        <header style="padding-top: 0rem;">
+            <div class="nav">
+                <div class="navbar">
+                    <div class="logo"><a href="index.html"> <img style=" width: 3.2rem; border-radius: 50px;" src="./Img/logo.jpg" alt="Logo"></div>
+                        <ul class="links " style="margin-top: 0rem;"></a>
+                        <li><button class="fullScreenTabs" style="margin-top: 0rem;"><a href="index.html">Home</a></button></li>
+                        <li><button class="fullScreenTabs" style="margin-top: 0rem;"><a href="card.html">Movies</a></button></li>
+                        <li><button class="fullScreenTabs" style="margin-top: 0rem;"><a href="about.html">About</a></button></li>
+                        
+                    </ul>
+
+
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+
+
+                <div class="dropdown_menu">
+                    <ul class="links">
+                        <li><button class="fullScreenTabs" style="margin-top: 0rem;"><a href="index.html">Home</a></button></li>
+                        <li><button class="fullScreenTabs" style="margin-top: 0rem;"><a href="card.html">Movies</a></button></li>
+                        <li><button class="fullScreenTabs" style="margin-top: 0rem;"><a href="about.html">About</a></button></li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+    </div>
+
+    <div class="wrapper"  data-aos="zoom-in">
+        <div class="main_card ">
+            <div class="card_left">
+                <div class="card_datails">
+                    <h1>Thor</h1>
+                    <div class="card_cat">
+                        <p class="year">2011</p>
+                        <p class="genre">Action | Fantacy </p>
+                        <p class="time">2h 28m</p>
+                    </div>
+                    <p class="disc">The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in
+                        Midgard (Earth), where he soon becomes one of their finest defenders.</p>
+                    <a href="https://www.imdb.com/title/tt0800369/" target="_blank">Read More</a>
+                    <div class="social-btn">
+                        <!-- WATCH TRAILER-->
+                        <button class="trailer">
+                            <a href="https://youtu.be/JOddp-nlNvQ" style="color: #fff; text-decoration: none;"><i class="fas fa-play"></i> SEE TRAILER</a> 
+                        </button>
+                        <!--USERS RATINGS-->
+                        <button>
+                            <i class="fas fa-thumbs-up"></i> 97%
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card_right">
+                <div class="img_container">
+                    <img src="./Img/Thor Movie 1.jpg" alt="">
+                </div>
+                <div class="play_btn">
+                    <a href="https://www.imdb.com/title/tt0800369/" target="_blank">
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper"  data-aos="zoom-in">
+        <div class="main_card">
+            <div class="card_left">
+                <div class="card_datails">
+                    <h1>Thor: The Dark World</h1>
+                    <div class="card_cat">
+                        <p class="year">2013</p>
+                        <p class="genre">Action | Adventure </p>
+                        <p class="time">1h 58m</p>
+                    </div>
+                    <p class="disc">When the Dark Elves attempt to plunge the universe into darkness, Thor must embark on a perilous and personal journey that will reunite him with doctor Jane Foster.</p>
+                    <a href="https://www.imdb.com/title/tt1981115/" target="_blank">Read More</a>
+                    <div class="social-btn">
+                        <!-- WATCH TRAILER-->
+                        <button>
+                            <a href="https://youtu.be/npvJ9FTgZbM" style="color: #fff; text-decoration: none;"><i class="fas fa-play"></i> SEE TRAILER</a> 
+                        </button>
+                        <!--USERS RATINGS-->
+                        <button>
+                            <i class="fas fa-thumbs-up"></i> 97%
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card_right">
+                <div class="img_container">
+                    <img src="./Img/Thor Movie 2.jpg" alt="">
+                </div>
+                <div class="play_btn">
+                    <a href="https://www.imdb.com/title/tt1981115/" target="_blank">
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper"  data-aos="zoom-in-up">
+        <div class="main_card">
+            <div class="card_left">
+                <div class="card_datails">
+                    <h1>Ragnarok</h1>
+                    <div class="card_cat">
+                        <p class="year">2017</p>
+                        <p class="genre">Action | Adventure | Comedy </p>
+                        <p class="time">2h 10m</p>
+                    </div>
+                    <p class="disc">The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in
+                        Midgard (Earth), where he soon becomes one of their finest defenders.</p>
+                    <a href="https://www.imdb.com/title/tt10648342/" target="_blank">Read More</a>
+                    <div class="social-btn">
+                        <!-- WATCH TRAILER-->
+                        <button>
+                            <a href="https://youtu.be/NNvt4OS7mhA" style="color: #fff; text-decoration: none;"><i class="fas fa-play"></i> SEE TRAILER</a> 
+                        </button>
+                        <!--USERS RATINGS-->
+                        <button>
+                            <i class="fas fa-thumbs-up"></i> 97%
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card_right">
+                <div class="img_container">
+                    <img src="./Img/Thor Movie 3.jpg" alt="">
+                </div>
+                <div class="play_btn">
+                    <a href="https://www.imdb.com/title/tt3501632/" target="_blank">
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper "  data-aos="zoom-in-up">
+        <div class="main_card">
+            <div class="card_left">
+                <div class="card_datails">
+                    <h1>Love and Thunder</h1>
+                    <div class="card_cat">
+                        <p class="year">2022</p>
+                        <p class="genre">Action | Adventure </p>
+                        <p class="time">1h 59m</p>
+                    </div>
+                    <p class="disc">Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.</p>
+                    <a href="https://www.imdb.com/title/tt10648342/" target="_blank">Read More</a>
+                    <div class="social-btn">
+                        <!-- WATCH TRAILER-->
+                        <button>
+                            <a href="https://youtu.be/Go8nTmfrQd8" style="color: #fff; text-decoration: none;"><i class="fas fa-play"></i> SEE TRAILER</a> 
+                        </button>
+                        <!--USERS RATINGS-->
+                        <button>
+                            <i class="fas fa-thumbs-up"></i> 97%
+                        </button>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="card_right">
+                <div class="img_container">
+                    <img src="./Img/Thor Movie 4.jpg" alt="">
+                </div>
+                <div class="play_btn">
+                    <a href="https://www.imdb.com/title/tt10648342/" target="_blank">
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset : 150,
+        duration: 1200
+    });
+    </script>
+</body>
+
+</html>
