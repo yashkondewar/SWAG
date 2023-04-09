@@ -439,58 +439,55 @@ img {
   border-radius: 5px;
 }
 
-
-
 /* about */
 
 body {
-    background-color: black;
-    font-family: arial;
-    background-color: #002733;
-    overflow-y: hidden;
+  background-color: black;
+  font-family: arial;
+  background-color: #002733;
+  overflow-y: hidden;
 }
 
-
 h3 {
-    color: white;
-    font-size: 70px;
-    line-height: 60px;
+  color: white;
+  font-size: 70px;
+  line-height: 60px;
 }
 
 h6 {
-    color: white;
+  color: white;
 }
 
 p {
-    color: #C5D8A4;
+  color: #c5d8a4;
 }
 
 a {
-    color: #95190C;
-    text-decoration: none;
-    font-weight: bold;
+  color: #95190c;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .button {
-    background-color: #107E7D;
-    /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  background-color: #107e7d;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .social {
-    color: white;
-    font-size: 12px;
+  color: white;
+  font-size: 12px;
 }
 
-.infoThor{
-    width: 50%;
-    font-size: 1.2rem;
-    text-decoration: none;
+.infoThor {
+  width: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
   line-height: 2rem;
 }
